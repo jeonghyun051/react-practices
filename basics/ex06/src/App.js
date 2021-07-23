@@ -4,7 +4,7 @@ import React from 'react';
 const App = function() {
     const message = 'Hello Wolrd';
     return (
-        <div>
+        <div className="app">
             <h1>{message}</h1>
         </div>
     );

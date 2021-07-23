@@ -10,7 +10,7 @@ module.exports = {
         rules: [{
             test: /\.js/i,
             exclude: /node_modules/,
-            loader: 'babel-loader'                  // bable
+            loader: 'babel-loader'
         }, {
             test: /\.css$/i,
             use: ['style-loader', 'css-loader']
@@ -18,8 +18,8 @@ module.exports = {
             test: /\.svg$/i,
             loader: 'file-loader',
             options: {
-                outputPath: '/assets/images',       
-                name: '[name].[ext]'                // 현재이름이랑 확장자를 public/outputPath 여기 저장 
+                outputPath: '/assets/images',
+                name: '[name].[ext]'
             }
         }]
     },
@@ -31,6 +31,6 @@ module.exports = {
         liveReload: true,
         hot: false,
         compress: true,
-        historyApiFallback: true // route 에서 사용됨
+        historyApiFallback: true
     }
 }
