@@ -23,8 +23,10 @@ module.exports = {
             }
         }]
     },
+    devtool: "eval-source-map",
     devServer: {
         contentBase: path.resolve('public'),
+        watchContentsBase: true,
         host: "0.0.0.0",
         port: 9999,
         inline: true,
