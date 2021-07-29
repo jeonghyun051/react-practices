@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import styles from './assets/css/ListItem.css'
 
 const ListItem = ({ guestbooks }) => {
     return ( 
-        <li className={"Guestbook__List__Item"}>
+        <li className={ styles.Guestbook__List__Item }>
             <strong>{guestbooks.name}</strong>
             <p>
-                {guestbooks.message}
+                {guestbooks.message && guestbooks.message.split('\n').map((line, index) => index > 0 ?
+                    <Fragment>
+                        <br/>
+                        { line }
+                    </Fragment> : line) }
             </p>
             <strong></strong>
             <a href=''>삭제</a>

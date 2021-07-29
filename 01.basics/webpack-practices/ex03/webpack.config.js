@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: path.resolve('src/index.js'),
     output: {
         path: path.resolve('public'),
@@ -14,6 +15,6 @@ module.exports = {
         liveReload: true,
         hot: false,
         compress: true,
-        historyApiFallback: true // route 에서 사용됨
+        historyApiFallback: true
     }
 }

@@ -1,5 +1,5 @@
-import { App } from './App.js'
-import '.index.css';
+import { App } from './App';
+import './assets/css/index.css';
 
 document
     .getElementById('root')

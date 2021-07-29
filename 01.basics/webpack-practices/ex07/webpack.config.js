@@ -8,29 +8,20 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js/i,
-            exclude: /node_modules/,
-            loader: 'babel-loader'                  // bable
-        }, {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader']
-        }, {
-            test: /\.svg$/i,
-            loader: 'file-loader',
-            options: {
-                outputPath: '/assets/images',       
-                name: '[name].[ext]'                // 현재이름이랑 확장자를 public/outputPath 여기 저장 
-            }
+            test: /\.txt$/i,
+            loader: path.resolve('src/text-loader.js')
         }]
     },
+    devtool: "eval-source-map",
     devServer: {
         contentBase: path.resolve('public'),
+        watchContentBase: true,
         host: "0.0.0.0",
         port: 9999,
         inline: true,
         liveReload: true,
         hot: false,
         compress: true,
-        historyApiFallback: true // route 에서 사용됨
+        historyApiFallback: true
     }
 }
