@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styles from './assets/css/ListItem.css'
+import styles from './assets/scss/ListItem.scss'
 
 const ListItem = ({ guestbooks }) => {
     return ( 

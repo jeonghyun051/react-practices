@@ -4,8 +4,8 @@
 ### ex02: Component Styling                                - Kanban Board #2
 ### ex03: React Event              
 ### ex04: State I: Controlled VS Uncontrolled Component
-### ex05: State II: Stateful and Pure Component
-### ex06: State III: Data Flow (Data Flow: Down->Top)
+### ex04: State II: Stateful and Pure Component
+### ex04: State III: Data Flow (Data Flow: Down->Top)
 ### ex07: Component Lifecycle + AJAX(fetch, axios)
 
 ### Guestbook SPA [과제]
