@@ -1,43 +1,55 @@
-import React, {Fragment, useRef} from 'react';
+import React, { Fragment,useRef } from 'react';
 import logo from '../assets/images/react-logo.png';
 
 export default function App() {
     const imageRef = useRef(null);
-    const onKeyPressInput = function(e){
-        // enter 치면 출력
-        if(e.key == 'Enter'){
-            console.log('onKeyPressInput');
-            //e.target.value = '';          // bad
+
+    const onKeyPressInput = function(e) {
+        if(e.key = 'Enter') {
+            console.log(e.target.value);
         }
     }
-    const onFocusInput = function(e){
-        console.log('onFocusInput')
-    }
-    const onBlurInput = function(e){
-        console.log('onBlurInput')
-    }
-    const onMouseOverImage = function(e){
-        console.log('onMouseOverImage')
-    }
-    const onMouseMoveImage = function(e){
-        console.log('onMouseMoveImage')
-    }
-    const onMouseOutImage = function(e){
-        console.log('onMouseOutImage')
-    }
-    const onMouseDownImage = function(e){
-        console.log('onMouseDownImage')
-    }
-    const onMouseUpImage = function(e){
-        console.log('onMouseUpImage')
-    }
-    const onClickImage = function(e){
-        console.log('onClickImage')
-    }
-    const onDoubleClickImage = function(e){
-        console.log('onDoubleClickImage')
+
+    const onFocusInput = function(e) {
+        console.log('focused');
     }
 
+    const onBlurInput = function(e) {
+        console.log('blured');
+    }
+
+    const onMouseOverImage = function(e) {
+        console.log('mouseover', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onMouseMoveImage = function(e) {
+        const offsetTop = imageRef.current.offsetTop;
+        const offsetLeft = imageRef.current.offsetLeft;
+        console.log('offsetTop:'+offsetTop);
+        console.log('offsetLeft:'+offsetLeft);
+        console.log('mousemove', `x=${e.clientX - offsetLeft}, y=${e.clientY-offsetTop}`);
+    }
+
+    const onMouseOutImage = function(e) {
+        console.log('mouseout', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onMouseDownImage = function(e) {
+        console.log('mousedown', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onMouseUpImage = function(e) {
+        console.log('mouseup', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onClickImage = function(e) {
+        console.log('clicked', `x=${e.clientX}, y=${e.clientY}`);
+    }
+
+    const onDoubleClickImage = function(e) {
+        console.log('double clicked', `x=${e.clientX}, y=${e.clientY}`);
+    }
+    
 
     return (
         <Fragment>
@@ -51,7 +63,7 @@ export default function App() {
                 <br/>
                 <br/>
             <img
-                ref={ imageRef }
+                ref = { imageRef }
                 style={ {
                     cursor: 'pointer',
                     width: 190,
