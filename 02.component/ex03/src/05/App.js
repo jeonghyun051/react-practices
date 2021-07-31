@@ -1,9 +1,9 @@
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 import './assets/scss/App.scss';
 
 export default class App extends Component {
     onScroll(e) {
-        console.log(this.outterRef.scrollTop + ":");
+        console.log(this.outterRef.scrollTop, ":", this.outterRef.clientHeight, ":", this.innerRef.clientHeight );
     }
 
     render(){
@@ -11,11 +11,11 @@ export default class App extends Component {
             <div
                 ref={ ref => this.outterRef = ref }
                 className={'App'}
-                onScroll={this.onScroll}>
-                <div>
+                onScroll={ this.onScroll.bind(this) }>
+                <div ref={ ref => this.innerRef = ref }>
                     <ul>
-                        { Array.from({length: 100}, (_, i) => i+1).map(i =>
-                            <li>
+                        { Array.from({length: 100}, (_, i) => i).map(i =>
+                            <li key={i}>
                                 { `아이템 ${i} 입니다.` }
                             </li>
                         ) }
