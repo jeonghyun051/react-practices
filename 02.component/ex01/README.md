@@ -12,8 +12,12 @@
 
 ### 02. FoodList src/01 : Class Component
 ### 03. FoodList src/02 : Data Flow with Class Component
-### 04. FoodList src/03 : Data Flow with Fucntion Component
-
+### 04. FoodList src/03 : Data Flow with Funcntion Component
+### 05. src/04 : Property Validation(Design 할 때) : 따로 설치 필요
+    ```bash
+    $ npm i -D prop-types
+    
+    ```
 
 ### Run Examples
 ```bash
