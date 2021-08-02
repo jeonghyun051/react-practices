@@ -20,7 +20,7 @@ export default function MyComponent({ props01, props02, props03, props04, props0
             <br/>
             <span>props07: { props07 ? props07 : '---not set---' }</span>
             <br/>
-            <span>props08: { props08 ? props08.map((e,i) => e ? <b key={i}>{'true'}{ ' ' }</b> : <b key={i}>{'false'}{ ' ' }</b>) : '---not set---' }</span>
+            <span>props08: { props08 ? props08.map((e,i) => e ? <b key={i}>{'true'}{' '}</b> : <b key={i}>{'false'}{' '}</b>) : '---not set---' }</span>
             <br/>
             <span>props09: { props09 ? 
                                 <div>
