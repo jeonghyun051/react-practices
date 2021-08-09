@@ -1,0 +1,12 @@
+2021-08-09 12:34:50 error: Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\node_modules\mysql2\lib\connection.js:148:17)
+    at Connection.end (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\node_modules\mysql2\lib\connection.js:855:26)
+    at Object.findAll (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\backend\models\emaillist.js:16:18)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async readAll (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\backend\controllers\emaillist.js:6:29)
+2021-08-09 12:51:38 error: Error: Can't add new command when connection is in closed state
+    at Connection._addCommandClosedState (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\node_modules\mysql2\lib\connection.js:148:17)
+    at Connection.end (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\node_modules\mysql2\lib\connection.js:855:26)
+    at Object.findAll (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\backend\models\emaillist.js:16:18)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async readAll (D:\douzone2021\vscode-projects\react-practices\07 integration\app01.emaillist\backend\controllers\emaillist.js:6:29)
