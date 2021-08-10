@@ -1,22 +1,49 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from './SearchBar';
 import Emaillist from './Emaillist';
-import data from './assets/json/data.json'
-
 
 export default function EmaillistApp() {
-    const [emails] = useState(data);
-    const [ keyword , setKeyword ] = useState('');
+    const [emails, setEmails] = useState([]);
+    const [keyword, setKeyword] = useState('');
+    
+    useEffect(async () => {
+        try {
+            const response = await fetch('/api', {
+                methid: 'get',
+                mode: 'same-origin',
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                body: null
+            });
 
-    const notifyKeywordChanged = function(keyword){
-        setKeyword(keyword);
+            if(!response.ok){
+                throw new Error(`${response.status} ${response.statusText}`);    
+            }
+
+            const json = await response.json();
+            if(json.result !== 'success'){
+                throw new Error(`${json.result} ${json.message}`);    
+            }
+
+            setEmails(json.data);
+        } catch(err){
+            console.err(err);
+        }       
+    }, []);
+
+    const notifyKeywordChanged = function(keyword) {
+        setKeyword(keyword);    
     }
 
     return (
         <div className={ 'EmaillistApp' }>
-            {/* notifyKeywordChanged이 실행되면 상태가 바뀌니까 다시 그려진다. */}
-            <SearchBar callback={ notifyKeywordChanged } keyword={ keyword }/> 
-            <Emaillist emails={ emails } keyword={ keyword } />
+            <SearchBar 
+                callback={ notifyKeywordChanged }
+                keyword={ keyword } />
+            <Emaillist
+                emails={ emails }
+                keyword={ keyword } />
         </div>
     );
 }

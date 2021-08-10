@@ -28,7 +28,8 @@
 2. nodemon
 3. webpack dev server
 4. package.json
-5. node application
+5. npm i -D concurrently
+6. node application
 
 ## Application
 1. app01.emaillist
@@ -36,7 +37,6 @@
    - backend: Fully APIs(Node Exporess기반)
    - Frontend: React(SPA)
    - AJAX: fetch 기반
-
 2. app02.kanban
 3. app03.guestbook
 4. app04.gallery
