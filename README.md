@@ -13,4 +13,4 @@
 ### Emaillist App
 ### Guestbook App   [과제] state & props / 통신
 ### Gallery App     [과제]
-### Scheduler App   [프로젝트 프로타임]
+### Scheduler App   [프로젝트 프로토타입]
